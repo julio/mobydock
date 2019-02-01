@@ -1,5 +1,5 @@
 FROM ruby:2.3-slim
-MAINTAINER Nick Janetakis <nick.janetakis@gmail.com>
+LABEL maintainer="Julio Santos <julio@morgane.com>"
 
 RUN apt-get update && apt-get install -qq -y build-essential nodejs libpq-dev --fix-missing --no-install-recommends
 
