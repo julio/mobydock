@@ -20,6 +20,10 @@ services:
 
   mobydock:
     build: .
+    # this seems to help a little bit with race conditions where
+    # postgres is not ready yet when rails starts
+    # command: bash -c 'while !</dev/tcp/postgres/5432; do sleep 1; done; rake db:migrate'
+
     ports:
       - '8000:8000'
     env_file:
